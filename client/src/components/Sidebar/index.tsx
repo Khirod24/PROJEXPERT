@@ -89,10 +89,10 @@ const Sidebar = () => {
 
             {showPriority && (
             <>
-            <SidebarLink icon={AlertCircle} label="Urgent" href="priority/urgent"/>
-            <SidebarLink icon={ShieldAlert} label="High" href="priority/high"/>
-            <SidebarLink icon={AlertTriangle} label="Medium" href="priority/medium"/>
-            <SidebarLink icon={AlertOctagon} label="Low" href="priority/low" />
+            <SidebarLink icon={AlertCircle} label="Urgent" href="/priority/urgent"/>
+            <SidebarLink icon={ShieldAlert} label="High" href="/priority/high"/>
+            <SidebarLink icon={AlertTriangle} label="Medium" href="/priority/medium"/>
+            <SidebarLink icon={AlertOctagon} label="Low" href="/priority/low" />
             <SidebarLink icon={Layers3} label="Backlog"
             href="/priority/backlog"/>
             </>
