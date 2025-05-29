@@ -1,17 +1,19 @@
 version: 1
-frontend:
-  phases:
-    preBuild:
-      commands:
-        - npm install --legacy-peer-deps
-    build:
-      commands:
-        - npm run build
-  artifacts:
-    baseDirectory: .next
-    files:
-      - '**/*'
-  cache:
-    paths:
-      - node_modules/**/*
-      - .next/cache/**/*
+applications:
+  - frontend:
+      phases:
+        preBuild:
+          commands:
+            - cd client
+            - npm ci --legacy-peer-deps
+        build:
+          commands:
+            - npm run build
+      artifacts:
+        baseDirectory: client/.next
+        files:
+          - '**/*'
+      cache:
+        paths:
+          - client/node_modules/**/*
+          - client/.next/cache/**/*
