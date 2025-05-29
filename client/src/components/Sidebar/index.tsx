@@ -42,7 +42,7 @@ const Sidebar = () => {
 
             {/* TEAM */}
             <div className="flex items-center gap-5 border-y-[1.5px] border-gray-200 px-8 py-4 dark:border-gray-700">
-                <Image src="/logo.png" alt='logo' width={40} height={40}   priority/>
+                <Image src="https://px-s3-images.s3.eu-north-1.amazonaws.com/logo.png" alt='logo' width={40} height={40}   priority/>
                 <div>
                     <h3 className="text-md font-bold tracking-wide dark:text-gray-200">MY TEAM</h3>
                     <div className="mt-1 flex items-start gap-2">
