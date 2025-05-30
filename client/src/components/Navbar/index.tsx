@@ -3,7 +3,7 @@ import {Menu, Moon, Search, Settings, Sun, User} from "lucide-react"
 import Link from 'next/link'
 import { useAppDispatch, useAppSelector } from '@/app/redux';
 import {setIsDarkMode, setIsSidebarCollapsed} from "@/state"
-import { useGetAuthUserQuery } from "@/state/api";
+// import { useGetAuthUserQuery } from "@/state/api";
 import { signOut } from "aws-amplify/auth";
 import Image from "next/image";
 
@@ -13,17 +13,17 @@ const Navbar = () => {
     (state) => state.global.isSidebarCollapsed,
   );
   const isDarkMode = useAppSelector((state) => state.global.isDarkMode);
-  const { data: currentUser } = useGetAuthUserQuery({});
-  const handleSignOut = async () => {
-    try {
-      await signOut();
-    } catch (error) {
-      console.error("Error signing out: ", error);
-    }
-  };
+  // const { data: currentUser } = useGetAuthUserQuery({});
+  // const handleSignOut = async () => {
+  //   try {
+  //     await signOut();
+  //   } catch (error) {
+  //     console.error("Error signing out: ", error);
+  //   }
+  // };
 
-  if (!currentUser) return null;
-  const currentUserDetails = currentUser?.userDetails;
+  // if (!currentUser) return null;
+  // const currentUserDetails = currentUser?.userDetails;
 
   return (
     <div className="flex items-center justify-between bg-white px-4 py-3 dark:bg-black">
@@ -59,7 +59,7 @@ const Navbar = () => {
         
         <div className="ml-2 mr-5 hidden min-h-[2em] w-[0.1rem] bg-gray-200 md:inline-block"></div>
         
-        <div className="hidden items-center justify-between md:flex">
+        {/* <div className="hidden items-center justify-between md:flex">
           <div className="align-center flex h-9 w-9 justify-center">
             {!!currentUserDetails?.profilePictureUrl ? (
               <Image
@@ -82,7 +82,7 @@ const Navbar = () => {
           >
             Sign out
           </button>
-        </div>
+        </div> */}
 
       </div>
     </div>
